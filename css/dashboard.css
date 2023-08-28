@@ -1,0 +1,471 @@
+#dashboardMainContainer{
+    display:flex;
+    flex-direction: row;
+}
+div.dashboard_sidebar{
+    width: 30%;
+}
+div.dashboard_sidebar{
+    width: 20%;
+    background: #007bff;
+    height: 150vh;
+   
+}
+div.dashboard_content_container{
+    width: 80%;
+    background: #f4f6f9;
+    height: 200vh;
+    
+}
+
+.logotelecom {
+    max-width: 100%;
+    height: auto;
+    padding: 10px; 
+    display: block;
+    width: 100%;
+    height: auto;
+    
+  }
+.dashboard_sidebar_user{
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    
+    
+}
+.dashboard_sidebar_user img{
+    width: 80px;
+    display:inline-block;
+    border-radius: 50%;
+    border: 2px solid #323232;
+    margin-right: 5px;
+    vertical-align: middle;
+
+}
+.dashboard_sidebar_user span{
+    top: 20%;
+    font-size:18px;
+    text-transform: uppercase;
+    color:#fff;
+    display: inline-block;
+}
+ul.dashboard_menu_lists{
+    padding: 0px;
+    margin-top: 20px;
+    width: 94.5%;
+    text-align: left;
+    
+    
+}
+ul.dashboard_menu_lists li{
+    padding : 15px 10px;
+    font-size: 18px;
+    text-transform : uppercase;
+    list-style-type: none;
+    width: 100%;
+    
+}
+ul.dashboard_menu_lists li a{
+    text-decoration: none;
+    color:#fff;
+    height: 100%;
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    
+}
+ul.dashboard_menu_lists li:hover{
+    background-color: hsl(198, 37%, 31%);
+    color : #fff;
+    transition: 0.3s all;   
+}
+ul.dashboard_menu_lists li.menuActive{
+    background: rgb(122, 122, 214)
+    color #fff;
+}
+div.dashboard_topNav{
+    background: #fff;
+    padding: 20px;
+
+}
+div.dashboard_topNav a{
+    color: #848383;
+    font-size: 18px;
+    text-decoration: none;
+}
+a#logoutBtn{
+    float: right;
+}
+.dashboard_content{
+    padding: 50px 10px 10px 10px ;
+}
+.dashboard_content_main{
+    background: #fff;
+    height: 100%;
+    min-height: 800px;
+}
+ul.dashboard_menu_lists li a i {
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+form.appForm {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px; 
+    border: 1px solid #cecfd0;
+    border-radius: 5px;
+}
+
+
+form input.appFormInput {
+    width: 100%;
+    height: 29px;
+    margin-bottom: 10px; 
+    padding: 5px; 
+    border: 1px solid #d6d7da;
+    border-radius: 5px;
+}
+
+
+form button[type="submit"] {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+form button[type="submit"].sa{
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+    margin: 0 auto;
+    text-align: center;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+form button[type="submit"] i {
+    margin-right: 5px;
+}
+p.responseMessage{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 33px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+p.responseMessage_error{
+    color: #6c1c1c;
+}
+p.responseMessage_success{
+    color: #0056b3;
+}
+/* Style for the table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th, .table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.actions a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.actions a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
+
+    .actions a {
+        padding: 3px 8px;
+    }
+}
+#edit-form {
+    
+    margin-top: 20px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto 0; 
+}
+
+
+#edit-form label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left; 
+}
+
+#edit-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box; 
+}
+
+#edit-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 5px; 
+}
+
+#edit-form button:hover {
+    background-color: #0056b3;
+}
+
+#edit-form #cancel-edit {
+    background-color: #ccc;
+    margin-left: 5px; 
+}
+
+#edit-form #cancel-edit:hover {
+    background-color: #999;
+}
+#collegeChart,
+#specialityChart,
+#internshipTypeChart {
+    width: 30%; 
+    height: 500px; 
+    margin: 0 10px; 
+    display: inline-block;
+    vertical-align: top;
+    background-color: #fff; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+
+canvas {
+    width: 400px!important;
+    height: 450px !important;
+    display: block;
+}
+.chart {
+    width: calc(33.33% - 10px); 
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    height: 470px;
+}
+.chart-container {
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: 10%;
+}
+
+.searchform {
+    display: flex;
+    align-items: center;
+    margin-left: 40%;
+}
+
+.labelsearch {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.inputsearch {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10%;
+}
+
+.sr {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    margin-left: 50px; 
+}
+
+.sr:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+    .inputsearch {
+        width: 100%; 
+    }
+
+    .sr {
+        margin-top: 10px; 
+        margin-left: 0; 
+    }
+}
+.a2{
+    margin-top: 5px;
+}
+
+.lol {
+    width: 50%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 16px;
+    margin: 0 auto; 
+}
+
+.tab {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.tab {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.parag {
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 45%;
+    
+}
+.srtitle{
+    margin-left: 42.5%;
+}
+
+@media (max-width: 768px) {
+    .lol {
+        font-size: 14px;
+    }
+}
+.user-added-message {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+ 
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: 23.9%;
+    display: none;
+}
+
+.user-added-message p {
+    text-align: center;
+}
+.intern-added-message {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+ 
+    bottom: 20px;
+    right: 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 50%;
+    margin-left: 23.9%;
+    display: none;
+}
+
+.intern-added-message p {
+    text-align: center;
+}
+#update_task{
+    height: 100px;
+}
+textarea {
+    font-size: 14px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    resize: vertical; 
+    width: 94%;
+    height: 80px;
+  }
+  #act{
+    display: inline block;
+  }
+  .actions #ra {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: 1px;
+    cursor: pointer;
+    font-size: 15px;
+}
+.actions #ra:hover {
+    background-color: #0056b3;
+}
+
+
