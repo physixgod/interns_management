@@ -15,7 +15,7 @@ $start_date = $_POST['startDate'];
 $end_date = $_POST['endDate'];
 $internship_type = $_POST['internshipType'];
 
-$insert = "INSERT INTO $table_name (id, first_name, last_name, email, cin, mobile, college, diploma, speciality, start_date, end_date, internship_type) VALUES ('$id', '$first', '$last', '$email', '$cin', '$mob', '$college', '$diploma', '$speciality', '$start_date', '$end_date', '$internship_type')";
+$insert = "INSERT INTO $table_name (id, first_name, last_name, email, cin, mobile, college, diploma, speciality, start_date, end_date, internship_type,intership_status) VALUES ('$id', '$first', '$last', '$email', '$cin', '$mob', '$college', '$diploma', '$speciality', '$start_date', '$end_date', '$internship_type','Pending..')";
 
 try {
     $conn->exec($insert);

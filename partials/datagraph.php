@@ -23,7 +23,7 @@ $internshipTypeData = $internshipTypeStmt->fetchAll(PDO::FETCH_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Statiscs - Internship Management System</title>
+    <title>Statistics - Internship Management System</title>
     <link rel="stylesheet" type="text/css" href="../css/dashboard.css">
     <link rel="stylesheet" href="css/font-aweso me/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/6eae8b1d33.js" crossorigin="anonymous"></script>
@@ -44,6 +44,10 @@ $internshipTypeData = $internshipTypeStmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -58,7 +62,7 @@ $internshipTypeData = $internshipTypeStmt->fetchAll(PDO::FETCH_ASSOC);
 
                     <li>
                         <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
-                                Statiscs</span></a>
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="add.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">

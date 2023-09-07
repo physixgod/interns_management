@@ -58,6 +58,10 @@ if (isset($_POST['update'])) {
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -72,7 +76,7 @@ if (isset($_POST['update'])) {
 
                     <li>
                         <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
-                                Statiscs</span></a>
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="add.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">
@@ -123,7 +127,7 @@ if (isset($_POST['update'])) {
                                                 class="form-control"><?php echo $row['tasks'] ?></textarea>
                                             <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
 
-                                        
+
                                     </td>
                                     <td class="actions" id="act">
                                         <input type="submit" name="update" value="Save" id="ra">
@@ -136,6 +140,7 @@ if (isset($_POST['update'])) {
                         </table>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

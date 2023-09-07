@@ -44,6 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -57,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </li>
                     <li>
                         <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
-                                Statiscs</span></a>
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="add.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">
@@ -79,9 +83,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="dashboard_content_main">
                     <div class="searchform">
                         <form method="POST">
-                            <div class="a1"><input class="inputsearch" type="text" id="search-query" name="search-query"></div>
+                            <div class="a1"><input class="inputsearch" type="text" id="search-query"
+                                    name="search-query"></div>
                             <div class="a2"><button class="sr" type="submit"><i class="fa fa-search"
-                                    aria-hidden="true"></i>Search</button>
+                                        aria-hidden="true"></i>Search</button>
                             </div>
                         </form>
                     </div>
@@ -113,9 +118,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             <p class="parag">No results found.</p>
                         <?php endif; ?>
                     <?php endif; ?>
+                </div>
             </div>
         </div>
-    </div>
     </div>
     </div>
     </div>

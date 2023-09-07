@@ -48,6 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById("edit-startDate").value = data.start_date;
                 document.getElementById("edit-endDate").value = data.end_date;
                 document.getElementById("edit-internshipType").value = data.internship_type;
+                document.getElementById("edit-internshipStatus").value = data.intership_status;
+            
             })
             .catch(error => {
                 console.error("Error:", error);

@@ -87,4 +87,22 @@ div#errorMessage{
     font-size: 20px;
     padding: 11px;
     }
-
+    .logo2 {
+        flex-basis: 50%;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+    
+    .logo2 img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .tt{
+        margin-left: 78%;
+    }
+    .container{
+        margin-top: 0px;
+    }

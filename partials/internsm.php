@@ -14,35 +14,37 @@ try {
 }
 
 
- 
+
 if (isset($_POST['save'])) {
     $first_name = $_POST["edit-first-name"];
-    $last_name=$_POST["edit-last-name"];
-    $cin=$_POST["edit-cin"];
-    $speciality=$_POST["edit-speciality"];
-    $startdate=$_POST["edit-startDate"];
-    $enddate=$_POST["edit-endDate"];
-    $intershiptype=$_POST["edit-internshipType"];
-    
+    $last_name = $_POST["edit-last-name"];
+    $cin = $_POST["edit-cin"];
+    $speciality = $_POST["edit-speciality"];
+    $startdate = $_POST["edit-startDate"];
+    $enddate = $_POST["edit-endDate"];
+    $intershiptype = $_POST["edit-internshipType"];
+    $internshipStatus = $_POST["edit-internshipStatus"];
 
 
- 
 
-  $sql = "UPDATE interns 
+
+
+    $sql = "UPDATE interns 
   SET first_name = '$first_name',
       last_name  = '$last_name',
       speciality='$speciality',
     start_date='$startdate',
     end_date='$enddate',
-      internship_type='$intershiptype' 
+      internship_type='$intershiptype' ,
+      intership_status='$internshipStatus'
     WHERE cin = '$cin'
   ";
 
-  if ($conn->query($sql) === true) {
-    echo "La réservation a été supprimée avec succès.";
-    header("Refresh:1");
-  } 
-} 
+    if ($conn->query($sql) === true) {
+        echo "La réservation a été supprimée avec succès.";
+        header("Refresh:1");
+    }
+}
 
 
 
@@ -71,6 +73,10 @@ if (isset($_POST['save'])) {
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -83,7 +89,8 @@ if (isset($_POST['save'])) {
                                 Search</span></a>
                     </li>
                     <li>
-                        <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText"> Statiscs</span></a>
+                        <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="datagraph.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">
@@ -116,6 +123,7 @@ if (isset($_POST['save'])) {
                                             <th>Type of Internship</th>
                                             <th>Start Date</th>
                                             <th>End Date</th>
+                                            <th>Internship Status</th>
                                             <th>Actions</th>
                                         </tr>
                                         <?php
@@ -146,6 +154,9 @@ if (isset($_POST['save'])) {
                                                 <td>
                                                     <?php echo $row['end_date'] ?>
                                                 </td>
+                                                <td>
+                                                    <?php echo $row['intership_status'] ?>
+                                                </td>
                                                 <td class="actions">
                                                     <a href="javascript:void(0);" class="edit-button"
                                                         data-id="<?php echo $row['cin'] ?>">Edit</a>
@@ -172,46 +183,51 @@ if (isset($_POST['save'])) {
                                         <input type="date" id="edit-endDate" name="edit-endDate">
                                         <label for="edit-internshipType">Type of Internship:</label>
                                         <input type="text" id="edit-internshipType" name="edit-internshipType">
+                                        <label for="edit-internshipStatus">Intership Status:</label>
+                                        <input type="text" id="edit-internshipStatus" name="edit-internshipStatus">
                                         <button type="submit" class="sa" id="save-edit" name="save">Save</button>
                                         <button type="button" id="cancel-edit">Cancel</button>
                                     </form>
-                                    
-                                        <script src="../js/your-js-file.js"></script>
-                                        <script>
-                                            document.addEventListener("DOMContentLoaded", function () {
-                                                const deleteButtons = document.querySelectorAll(".delete-button");
 
-                                                deleteButtons.forEach(button => {
-                                                    button.addEventListener("click", function () {
-                                                        const internCIN = parseInt(this.getAttribute("data-cin"));
-                                                        const confirmed = confirm("Do you really want to remove this intern?");
+                                    <script src="../js/your-js-file.js"></script>
+                                    <script>
+                                        document.addEventListener("DOMContentLoaded", function () {
+                                            const deleteButtons = document.querySelectorAll(".delete-button");
 
-                                                        if (confirmed) {
-                                                            fetch(`deleteIntern.php?cin=${internCIN}`, { method: "POST" })
-                                                                .then(response => response.json())
-                                                                .then(data => {
-                                                                    if (data.success) {
-                                                                        alert(data.message);
-                                                                        location.reload();
-                                                                    } else {
-                                                                        alert(data.message);
-                                                                    }
-                                                                })
-                                                                .catch(error => {
-                                                                    console.error("Error:", error);
-                                                                });
-                                                        }
-                                                    });
+                                            deleteButtons.forEach(button => {
+                                                button.addEventListener("click", function () {
+                                                    const internCIN = parseInt(this.getAttribute("data-cin"));
+                                                    const confirmed = confirm("Do you really want to remove this intern?");
+
+                                                    if (confirmed) {
+                                                        fetch(`deleteIntern.php?cin=${internCIN}`, { method: "POST" })
+                                                            .then(response => response.json())
+                                                            .then(data => {
+                                                                if (data.success) {
+                                                                    alert(data.message);
+                                                                    location.reload();
+                                                                } else {
+                                                                    alert(data.message);
+                                                                }
+                                                            })
+                                                            .catch(error => {
+                                                                console.error("Error:", error);
+                                                            });
+                                                    }
                                                 });
                                             });
-                                        </script>
+                                        });
+                                    </script>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </div>
     <script src="../js/script.js"></script>
 </body>

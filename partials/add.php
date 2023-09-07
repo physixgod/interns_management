@@ -31,6 +31,10 @@ $_SESSION['table'] = 'users';
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -45,7 +49,7 @@ $_SESSION['table'] = 'users';
 
                     <li>
                         <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
-                                Statiscs</span></a>
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="add.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">

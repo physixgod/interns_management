@@ -36,6 +36,10 @@ if (isset($_SESSION['response'])) {
             <div class="dashboard_sidebar_menus">
                 <ul class="dashboard_menu_lists">
                     <li class="menuActive">
+                        <a href="../homepage.php"><i class="fa fa-home" aria-hidden="true"></i><span
+                                class="menuText">Home</span></a>
+                    </li>
+                    <li class="menuActive">
                         <a href="usersadd.php"><i class="fa fa-user-plus" aria-hidden="true"></i><span
                                 class="menuText">Add new intern</span></a>
                     </li>
@@ -50,7 +54,7 @@ if (isset($_SESSION['response'])) {
 
                     <li>
                         <a href="datagraph.php"><i class="fa-solid fa-chart-simple"></i><span class="menuText">
-                                Statiscs</span></a>
+                        Statistics</span></a>
                     </li>
                     <li>
                         <a href="add.php"><i class="fa fa-user" aria-hidden="true"></i><span class="menuText">
@@ -73,7 +77,7 @@ if (isset($_SESSION['response'])) {
                     <div class="intern-form" id="internForm">
                         <form action="../database/addintern.php" method="POST" class="appForm">
                             <label for="id">ID:</label>
-                            <input class="appFormInput" type="number" id="id" name="id" >
+                            <input class="appFormInput" type="number" id="id" name="id">
                             <label for="name">First Name:</label>
                             <input class="appFormInput" type="text" id="name" name="name" required>
                             <label for="lastName">Last Name:</label>

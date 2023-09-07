@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($stmt->rowCount() === 1) {
         
         $_SESSION['username'] = $username;
-        header("Location: partials/datagraph.php");
+        header("Location: homepage.php");
         exit(); 
     } else {
         
@@ -44,7 +44,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
            <strong>ERROR:</strong> <p><?= $error_message ?></p>
         </div> 
     <?php } ?>
+    <img class ="tt"src="images/telecomlogo.png" height="200" width="200" >
     <div class="container">
+        
         <div class="loginHeader">
             <h1>InternHub</h1>
             <p>Internship Management System</p>
@@ -61,11 +63,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="form-group">
                     <button type="submit">Login</button>
                 </div>
+
             </form>
         </div>
         <div class="logo">
-            <img src="images/telecomlogo.png" alt="Logo">
+            <img src="images/intern.jpg" alt="Logo">
         </div>
+        
     </div>
 </body>
 </html>
